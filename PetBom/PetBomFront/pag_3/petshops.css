@@ -1,0 +1,551 @@
+body{
+    margin: 15px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/fundo_principal.png');
+}
+.container {
+    background-color: rgba(255, 255, 255); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Largura maior */
+    width: 100%; /* Para garantir que a largura total seja usada até o limite do max-width */
+    text-align: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFA76;
+    border-radius: 10px;
+}
+.logo img {
+    height: 100px;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+.search-bar input {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    background-color: #fbfbfb;
+    border: none;
+    border-radius: 25px;
+    font-family: "Sofia Sans", sans-serif;
+}
+.icon button {
+    color: #78E7FF;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.slider-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  width: 900px;
+  height: 400px;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #49D2F0;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #16a3c3;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container button {
+    margin: 25px;
+    padding: 16px 70px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 8px;
+    transition: 1.0s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    height: 250px;
+    margin: 0 20px;
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+    gap: 15px; /* Espaço entre os itens */
+}
+
+/* Customização da barra de rolagem */
+.scroll-container::-webkit-scrollbar {
+    height: 10px; /* Altura da barra de rolagem */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #d5f7ff; /* Cor de fundo da barra */
+    border-radius: 50px; /* Arredondar a barra */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #49D2F0; /* Cor do controle da barra */
+    border-radius: 10px; /* Arredondar o controle */
+    border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
+
+.image-wrapper {
+    display: inline-block;
+    width: 100px;
+    border: 2px solid #78E7FF;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+}
+.image-wrapper img {
+    height: 50px;
+    width: 90px;
+    border-radius: 10px;
+}
+.image-wrapper p {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Spline Sans Mono", monospace;
+}
+.large-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.large-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}
+.large-button {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+.large-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.large-button:hover {
+    background-color: #218838;
+}
+.button-label_1 {
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    color: #B983B2;
+}
+.button-label_2 {
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    color: #fb2626;
+}
+.info {
+    font-family: "Spline Sans Mono", monospace;
+    font-size: 20px;
+}
+.VerMais{
+  background: #FFEE96;
+  width: 50%;
+  border: none;
+  padding: 15px;
+  color: #49D2F0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  letter-spacing: 4px;
+  transition: .5s;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.VerMais:hover{
+  background: #FFEE96;
+  color: #07a6ca;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #49D2F0,
+              0 0 20px #49D2F0,
+              0 0 40px #49D2F0,
+              0 0 70px #49D2F0;
+}
+.footer {
+  padding: 3px;
+  background-color: #FFFA76;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 5px;
+}
+.footer-info {
+  text-align: center;
+  padding: 5px;
+  border-radius: 44px;
+  font-size: 10px;
+  color: #000000;
+}
+.menu-button {
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    left: 25px; /* Posiciona o modal na lateral direita */
+    width: 450px; /* Largura do modal */
+    height: 710px;
+    overflow-y: auto;
+    white-space: nowrap;
+    background-color: #f8f8f8f1;
+    border-radius: 15px;
+    scroll-behavior: smooth;
+  }
+  .modal::-webkit-scrollbar {
+    height: 10px; /* Altura da barra de rolagem */
+    width: 13px;  /* Largura da barra de rolagem */
+}
+
+.modal::-webkit-scrollbar-track {
+    background: #d5f7ff; /* Cor de fundo da barra */
+    border-radius: 50px; /* Arredondar a barra */
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: #49D2F0; /* Cor do controle da barra */
+    border-radius: 10px; /* Arredondar o controle */
+    border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
+  .modal-content {
+    text-align: center;
+    background-color: #ffffff50;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .menu {
+    background-color: #ffffff50;
+    padding: 10px;
+  }
+  
+  .menu.active {
+    display: block;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    cursor: pointer;
+}
+.modal-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    background-color: #78E7FF;
+    color: #ffffff;
+    transition: 1.0s;
+}
+.modal-button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+.title1{
+    font-family: "Wendy One", sans-serif;
+    font-size: 30px;
+    color: #49D2F0;
+}
+.subtitle2{
+    font-family: "Wendy One", sans-serif;
+    font-size: 20px;
+    color: #16a3c3;
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .carousel {
+    width: 45%;
+    margin-right: 20px;
+  }
+  
+  .carousel:last-child {
+    margin-right: 0;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  
+  .half-width {
+    width: 50%;
+    float: left;
+    padding: 20px;
+  }
+  
+  .image-holder {
+    position: relative;
+    width: 100%;
+    height: 200px; /* altura da imagem */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  .image-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; /* ou width: 100vw; */
+  }
+  
+  .image-wrapper {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .image-holder {
+    position: relative;
+  }
+  
+  .image-holder img {
+    width: 100%;
+    height: 200px; /* altura da imagem */
+    object-fit: cover;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  .ladoalado{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .div-esquerda {
+    width: 50%; /* ajuste o tamanho da div esquerda */
+    border: 2px solid #49D2F0;
+    border-radius: 15px;
+    background-color: #f0f0f000; /* cor de fundo da div esquerda */
+    padding: 20px; /* espaçamento interno da div esquerda */
+    margin: 10px; /* espaçamento externo da div esquerda */
+  }
+  
+  .div-direita {
+    width: 50%; /* ajuste o tamanho da div direita */
+    border: 2px solid #49D2F0;
+    border-radius: 15px;
+    background-color: #f0f0f000; /* cor de fundo da div esquerda */
+    padding: 20px; /* espaçamento interno da div direita */
+    margin: 10px; /* espaçamento externo da div direita */
+  }
+  .quatrodiv {
+    display: flex;
+    justify-content: center;
+  }
+  .div1, .div2, .div3, .div4 {
+    width: 25%; /* ajuste o tamanho de cada div */
+    height: 250px;
+    border: 2px solid #49D2F0;
+    border-radius: 15px;
+    background-color: #f0f0f000; /* cor de fundo de cada div */
+    padding: 20px; /* espaçamento interno de cada div */
+    margin: 10px; /* espaçamento externo de cada div */
+  }
+  .holder {
+    position: relative;
+  }
+  .holder img {
+    width: 100%;
+    height: 100%; /* altura da imagem */
+    object-fit: cover;
+  }
+  .holder p {
+    font-family: "Baloo Paaji 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
